@@ -85,38 +85,7 @@ export default function App() {
       </div>
 
       {/* Navigation Bar */}
-      <motion.nav 
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="fixed top-0 w-full bg-white/90 backdrop-blur-lg z-50 shadow-lg border-b border-pink-200"
-      >
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          {/* <div className="flex justify-center space-x-8 md:space-x-16">
-            {['HOME', 'GALLERY'].map((item, index) => (
-              <motion.button
-                key={item}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 + 0.5 }}
-                whileHover={{ 
-                  scale: 1.1, 
-                  color: "#db2777",
-                  y: -2
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="text-gray-700 font-semibold tracking-widest transition-all duration-300 relative group"
-              >
-                {item}
-                <motion.div 
-                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-500 group-hover:w-full transition-all duration-300"
-                  layoutId="navUnderline"
-                />
-              </motion.button>
-            ))}
-          </div> */}
-        </div>
-      </motion.nav>
+   
 
       {/* Hero Section with Sliding Background */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
