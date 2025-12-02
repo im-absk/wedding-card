@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/dancing-script": "^5.2.8",
+    "@fontsource/great-vibes": "^5.2.8",
     "@tailwindcss/vite": "^4.1.17",
     "framer-motion": "^12.23.24",
     "react": "^19.2.0",

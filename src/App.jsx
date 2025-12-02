@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
+import "@fontsource/dancing-script"; 
+import "@fontsource/great-vibes";
+
+
 
 export default function App() {
   const [currentBackground, setCurrentBackground] = useState(0);
@@ -140,40 +144,13 @@ export default function App() {
             transition={{ duration: 1, delay: 0.1 }}
             className="mb-8 md:mb-12 lg:mb-16"
           >
-            <h2 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-wider md:tracking-widest text-pink-100 drop-shadow-lg italic px-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-Dancing Script tracking-wider md:tracking-widest text-pink-100 drop-shadow-lg italic px-4"
+            style={{ fontFamily: "'Great Vibes', cursive" }}>
               Join us for the Wedding Of
             </h2>
           </motion.div>
 
-          {/* Enhanced Date with Mobile Responsiveness */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-8 md:mb-12"
-          >
-            <motion.p
-              className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white tracking-tight drop-shadow-2xl px-2"
-              animate={{ 
-                textShadow: [
-                  "0 0 15px rgba(255,255,255,0.8)",
-                  "0 0 25px rgba(255,182,193,0.9)",
-                  "0 0 15px rgba(255,255,255,0.8)"
-                ]
-              }}
-              transition={{ duration: 3, repeat: Infinity }}
-            >
-              19.01.2026
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="text-lg md:text-xl lg:text-2xl text-pink-200 font-light mt-2 md:mt-4 tracking-wide"
-            >
-              Monday
-            </motion.p>
-          </motion.div>
+       
 
           {/* Names with Enhanced Mobile Responsiveness */}
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 lg:space-x-8 mb-6 md:mb-8 px-2">
@@ -184,9 +161,13 @@ export default function App() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="relative"
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent drop-shadow-2xl">
-                Abhijith 
-              </h1>
+              <h1
+              className="text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent drop-shadow-2xl"
+              style={{ fontFamily: "'Dancing Script', cursive" }}
+               >
+               Abhijith
+            </h1>
+
               <motion.div
                 className="absolute -inset-2 md:-inset-4 bg-gradient-to-r from-pink-500/20 to-blue-500/20 rounded-full blur-lg md:blur-xl"
                 animate={{ opacity: [0.3, 0.6, 0.3] }}
@@ -211,9 +192,12 @@ export default function App() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="relative"
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent drop-shadow-2xl">
-                Poornima
-              </h1>
+                <h1
+              className="text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent drop-shadow-2xl"
+              style={{ fontFamily: "'Dancing Script', cursive" }}
+               >
+               Poornima
+            </h1>
               <motion.div
                 className="absolute -inset-2 md:-inset-4 bg-gradient-to-r from-blue-500/20 to-pink-500/20 rounded-full blur-lg md:blur-xl"
                 animate={{ opacity: [0.3, 0.6, 0.3] }}
@@ -222,12 +206,46 @@ export default function App() {
             </motion.div>
           </div>
 
+   {/* Enhanced Date with Mobile Responsiveness */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-8 md:mb-12"
+          >
+            <motion.p
+              className="text-2xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white tracking-tight drop-shadow-2xl px-2"
+              style={{ fontFamily: "'Dancing Script', cursive" }}
+              animate={{ 
+                textShadow: [
+                  "0 0 15px rgba(255,255,255,0.8)",
+                  "0 0 25px rgba(255,182,193,0.9)",
+                  "0 0 15px rgba(255,255,255,0.8)"
+                ]
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              19.01.2026
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="text-3xl md:text-xl lg:text-2xl text-pink-200 font-light mt-2 md:mt-4 tracking-wide"
+              style={{ fontFamily: "'Dancing Script', cursive" }}
+            >
+              
+              Monday
+            </motion.p>
+          </motion.div>
+
           {/* Animated Subtitle - Mobile Adjusted */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
             className="text-lg md:text-xl lg:text-2xl text-pink-100 font-light mb-6 md:mb-8 italic px-4"
+            style={{ fontFamily: "'Dancing Script', cursive" }}
           >
             Together forever, starting January 19th, 2026
           </motion.p>
@@ -401,8 +419,9 @@ export default function App() {
             transition={{ delay: 0.8 }}
             className="bg-white/80 rounded-xl p-6 border border-emerald-200"
           >
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              Cordially invite your esteemed presence with family on the auspicious occasion of the wedding of our son
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed"
+            style={{ fontFamily: "'Dancing Script', cursive" }}>
+              Cordially invite your esteemed presence with family on the auspicious occasion of the wedding
             </p>
           </motion.div>
 
@@ -464,7 +483,8 @@ export default function App() {
             transition={{ delay: 0.4 }}
             className="mb-6"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 tracking-wide font-sans">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 tracking-wide font-sans"
+            style={{ fontFamily: "'Dancing Script', cursive" }}>
               Abhijith S Kumar
             </h2>
           </motion.div>
@@ -496,7 +516,7 @@ export default function App() {
                 className="flex items-start space-x-3"
               >
                 <span className="text-blue-600 font-semibold min-w-20">S/o</span>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed" style={{ fontFamily: "'Dancing Script', cursive" }}>
                   Santhosh Kumar N R & Usha Kumary R
                 </p>
               </motion.div>
@@ -508,7 +528,7 @@ export default function App() {
                 className="flex items-start space-x-3"
               >
                 <span className="text-blue-600 font-semibold min-w-20">Address</span>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed" style={{ fontFamily: "'Dancing Script', cursive" }}>
                   Mini Bhavan, Velumthara,<br />
                   Charipparambu (PO),<br />
                   Kadakkal, Kollam
@@ -575,7 +595,7 @@ export default function App() {
             transition={{ delay: 0.4 }}
             className="mb-6"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 tracking-wide font-sans">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 tracking-wide font-sans" style={{ fontFamily: "'Great Vibes', cursive" }}>
               Poornima K L
             </h2>
           </motion.div>
@@ -607,7 +627,7 @@ export default function App() {
                 className="flex items-start space-x-3"
               >
                 <span className="text-rose-600 font-semibold min-w-20">D/o</span>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed" style={{ fontFamily: "'Dancing Script', cursive" }}>
                   R Kumar & Lathika B
                 </p>
               </motion.div>
@@ -619,7 +639,7 @@ export default function App() {
                 className="flex items-start space-x-3"
               >
                 <span className="text-rose-600 font-semibold min-w-20">Address</span>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 text-lg leading-relaxed" style={{ fontFamily: "'Dancing Script', cursive" }}>
                   Vaikundam, Kuthirapalam,<br />
                   Kadakkal, Kollam
                 </p>
@@ -677,7 +697,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-2xl md:text-3xl font-serif text-purple-700 font-bold mb-8"
+            className="text-4xl md:text-3xl font-serif text-purple-700 font-bold mb-8" style={{ fontFamily: "'Great Vibes', cursive" }}
           >
             Wedding Celebration
           </motion.h2>
@@ -723,7 +743,7 @@ export default function App() {
                 🏛️
               </motion.div>
               <p className="text-gray-700 font-semibold">Wedding Venue</p>
-              <p className="text-purple-600 font-bold text-lg md:text-xl mt-2">Athisayamangalam Devi Temple</p>
+              <p className="text-purple-600 font-bold text-lg md:text-xl mt-2">Athisayamangalam Temple Auditorium</p>
               <p className="text-gray-600 text-sm md:text-base mb-3">Thudayannoor, Kadakkal, Kollam</p>
               
               {/* Location Link */}
@@ -798,7 +818,7 @@ export default function App() {
                 <span className="text-purple-600">🏛️</span>
                 <div>
                   <p className="font-medium text-gray-800">Wedding Venue</p>
-                  <p className="text-gray-600 text-xs">Athisayamangalam Temple</p>
+                  <p className="text-gray-600 text-xs">Athisayamangalam Temple Auditorium</p>
                 </div>
               </motion.a>
               <motion.a
@@ -816,75 +836,22 @@ export default function App() {
               </motion.a>
             </div>
           </motion.div>
-        </motion.div>
-      </section>
 
-      {/* Final Love Section */}
-      <section className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 via-pink-50 to-rose-50 relative overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="bg-white/90 backdrop-blur-lg shadow-2xl rounded-3xl p-8 md:p-12 w-full max-w-2xl text-center border-4 border-red-200 relative z-10"
-        >
-          <motion.div
-            animate={{ 
-              scale: [1, 1.1, 1],
-            }}
-            transition={{ 
-              duration: 4,
-              repeat: Infinity,
-            }}
-            className="flex justify-center space-x-4 md:space-x-6 text-4xl md:text-6xl mb-8"
-          >
-            <span>🤵‍♂️</span>
-            <span className="text-2xl md:text-4xl text-red-400">💞</span>
-            <span>👰‍♀️</span>
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-2xl md:text-4xl font-serif text-red-600 font-bold mb-6"
-          >
-            Together Forever
-          </motion.h2>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="bg-gradient-to-br from-red-100 to-pink-100 rounded-2xl p-6 md:p-8 shadow-inner mb-8 border border-red-200"
-          >
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed italic">
-              "In your light, I learn how to love. In your beauty, how to make poems. 
-              You dance inside my chest, where no one sees you, but sometimes I do, 
-              and that sight becomes this art."
-            </p>
-          </motion.div>
-          
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="text-gray-600 mt-6 text-base md:text-lg font-medium"
-          >
-            We can't wait to celebrate this special day with you!
-          </motion.p>
-
-          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
             className="mt-8 pt-6 border-t border-red-200"
           >
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm" style={{ fontFamily: "'Dancing Script', cursive" }}>
               With love, Abhijith & Poornima
             </p>
           </motion.div>
+
         </motion.div>
       </section>
+
+      
 
       {/* Instagram Profile Link - Bottom Center */}
 {/* Instagram Profile Link - Bottom Center */}
