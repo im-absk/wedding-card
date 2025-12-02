@@ -325,136 +325,146 @@ useEffect(() => {
         `}</style>
       </section>
 
-      {/* Countdown Section */}
-      <section className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-200 to-teal-200"></div>
-        </div>
+    {/* Countdown Section */}
+<section className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50 relative overflow-hidden">
+  {/* Background Pattern */}
+  <div className="absolute inset-0 opacity-10">
+    <div className="absolute inset-0 bg-gradient-to-r from-emerald-200 to-teal-200"></div>
+  </div>
 
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="bg-white/90 backdrop-blur-lg shadow-2xl rounded-3xl p-8 md:p-12 w-full max-w-4xl text-center border-4 border-emerald-200 relative z-10"
+  >
+    {/* Days More Text */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.2 }}
+      className="mb-8"
+    >
+      <motion.h2
+        className="text-4xl md:text-6xl font-bold text-emerald-700 mb-2"
+        style={{ fontFamily: "'Dancing Script', cursive" }}
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        {timeLeft.days}
+      </motion.h2>
+      <p 
+        className="text-xl md:text-2xl text-emerald-600 font-semibold"
+        style={{ fontFamily: "'Dancing Script', cursive" }}
+      >
+        Days more
+      </p>
+    </motion.div>
+
+    {/* Countdown Labels */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4 }}
+      className="grid grid-cols-4 gap-4 mb-8"
+    >
+      {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="bg-white/90 backdrop-blur-lg shadow-2xl rounded-3xl p-8 md:p-12 w-full max-w-4xl text-center border-4 border-emerald-200 relative z-10"
+          key={label}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.6 + index * 0.1 }}
+          className="text-emerald-700 font-semibold text-sm md:text-lg"
+          style={{ fontFamily: "'Dancing Script', cursive" }}
         >
-          {/* Days More Text */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mb-8"
-          >
-            <motion.h2
-              className="text-4xl md:text-6xl font-bold text-emerald-700 mb-2"
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              {timeLeft.days}
-            </motion.h2>
-            <p className="text-xl md:text-2xl text-emerald-600 font-semibold">Days more</p>
-          </motion.div>
-
-          {/* Countdown Labels */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="grid grid-cols-4 gap-4 mb-8"
-          >
-            {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => (
-              <motion.div
-                key={label}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.6 + index * 0.1 }}
-                className="text-emerald-700 font-semibold text-sm md:text-lg"
-              >
-                {label}
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Countdown Timer */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
-            className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl p-6 md:p-8 shadow-inner border border-emerald-200 mb-8"
-          >
-            <motion.div
-              className="text-3xl md:text-5xl font-mono font-bold text-emerald-800 grid grid-cols-4 gap-4"
-              animate={{ scale: [1, 1.02, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-            >
-              <motion.span
-                key={`days-${timeLeft.days}`}
-                initial={{ scale: 1.2 }}
-                animate={{ scale: 1 }}
-                className="block"
-              >
-                {timeLeft.days.toString().padStart(2, '0')}
-              </motion.span>
-              <motion.span
-                key={`hours-${timeLeft.hours}`}
-                initial={{ scale: 1.2 }}
-                animate={{ scale: 1 }}
-                className="block"
-              >
-                {timeLeft.hours.toString().padStart(2, '0')}
-              </motion.span>
-              <motion.span
-                key={`minutes-${timeLeft.minutes}`}
-                initial={{ scale: 1.2 }}
-                animate={{ scale: 1 }}
-                className="block"
-              >
-                {timeLeft.minutes.toString().padStart(2, '0')}
-              </motion.span>
-              <motion.span
-                key={`seconds-${timeLeft.seconds}`}
-                initial={{ scale: 1.2 }}
-                animate={{ scale: 1 }}
-                className="block"
-              >
-                {timeLeft.seconds.toString().padStart(2, '0')}
-              </motion.span>
-            </motion.div>
-          </motion.div>
-
-          {/* Invitation Text */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="bg-white/80 rounded-xl p-6 border border-emerald-200"
-          >
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed"
-            style={{ fontFamily: "'Dancing Script', cursive" }}>
-              Cordially invite your esteemed presence with family on the auspicious occasion of the wedding
-            </p>
-          </motion.div>
-
-          {/* Decorative Elements */}
-          <motion.div
-            className="flex justify-center space-x-4 mt-8 text-3xl text-emerald-400"
-            animate={{ 
-              rotate: [0, 5, -5, 0],
-            }}
-            transition={{ 
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            <span>✨</span>
-            <span>💫</span>
-            <span>🌸</span>
-            <span>💫</span>
-            <span>✨</span>
-          </motion.div>
+          {label}
         </motion.div>
-      </section>
+      ))}
+    </motion.div>
+
+    {/* Countdown Timer */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.6 }}
+      className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl p-6 md:p-8 shadow-inner border border-emerald-200 mb-8"
+    >
+      <motion.div
+        className="text-3xl md:text-5xl font-bold text-emerald-800 grid grid-cols-4 gap-4"
+        style={{ fontFamily: "'Dancing Script', cursive" }}
+        animate={{ scale: [1, 1.02, 1] }}
+        transition={{ duration: 1, repeat: Infinity }}
+      >
+        <motion.span
+          key={`days-${timeLeft.days}`}
+          initial={{ scale: 1.2 }}
+          animate={{ scale: 1 }}
+          className="block"
+        >
+          {timeLeft.days.toString().padStart(2, '0')}
+        </motion.span>
+        <motion.span
+          key={`hours-${timeLeft.hours}`}
+          initial={{ scale: 1.2 }}
+          animate={{ scale: 1 }}
+          className="block"
+        >
+          {timeLeft.hours.toString().padStart(2, '0')}
+        </motion.span>
+        <motion.span
+          key={`minutes-${timeLeft.minutes}`}
+          initial={{ scale: 1.2 }}
+          animate={{ scale: 1 }}
+          className="block"
+        >
+          {timeLeft.minutes.toString().padStart(2, '0')}
+        </motion.span>
+        <motion.span
+          key={`seconds-${timeLeft.seconds}`}
+          initial={{ scale: 1.2 }}
+          animate={{ scale: 1 }}
+          className="block"
+        >
+          {timeLeft.seconds.toString().padStart(2, '0')}
+        </motion.span>
+      </motion.div>
+    </motion.div>
+
+    {/* Invitation Text */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.8 }}
+      className="bg-white/80 rounded-xl p-6 border border-emerald-200"
+    >
+      <p 
+        className="text-lg md:text-xl text-gray-700 leading-relaxed"
+        style={{ fontFamily: "'Dancing Script', cursive" }}
+      >
+        Cordially invite your esteemed presence with family on the auspicious occasion of the wedding
+      </p>
+    </motion.div>
+
+    {/* Decorative Elements */}
+    <motion.div
+      className="flex justify-center space-x-4 mt-8 text-3xl text-emerald-400"
+      animate={{ 
+        rotate: [0, 5, -5, 0],
+      }}
+      transition={{ 
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    >
+      <span>✨</span>
+      <span>💫</span>
+      <span>🌸</span>
+      <span>💫</span>
+      <span>✨</span>
+    </motion.div>
+  </motion.div>
+</section>
 
       {/* Groom Section */}
       <section className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 relative overflow-hidden">
