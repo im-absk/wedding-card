@@ -15,27 +15,37 @@ export default function App() {
   });
 
   // Countdown timer calculation
-  useEffect(() => {
-    const calculateTimeLeft = () => {
-      const weddingDate = new Date('January 19, 2026 00:00:00').getTime();
-      const now = new Date().getTime();
-      const difference = weddingDate - now;
+// Countdown timer calculation
+useEffect(() => {
+  const calculateTimeLeft = () => {
+    // CHANGE THIS LINE - Set to January 19, 2026 at 12:10 PM
+    const weddingDate = new Date('January 19, 2026 12:10:00').getTime();
+    const now = new Date().getTime();
+    const difference = weddingDate - now;
 
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000)
-        });
-      }
-    };
+    if (difference > 0) {
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((difference % (1000 * 60)) / 1000)
+      });
+    } else {
+      // When countdown reaches zero
+      setTimeLeft({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      });
+    }
+  };
 
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
+  calculateTimeLeft();
+  const timer = setInterval(calculateTimeLeft, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+  return () => clearInterval(timer);
+}, []);
 
   const backgrounds = [
     "/couple2.jpg",
