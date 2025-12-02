@@ -249,10 +249,10 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
-            className="text-lg md:text-xl lg:text-2xl text-pink-100 font-light mb-6 md:mb-8 italic px-4"
+            className="text-2xl md:text-xl lg:text-xl text-pink-100 font-light mb-6 md:mb-8 italic px-4"
             style={{ fontFamily: "'Dancing Script', cursive" }}
           >
-            Together forever, starting January 19th, 2026
+            Together forever
           </motion.p>
 
           <motion.div
@@ -523,7 +523,7 @@ export default function App() {
             transition={{ delay: 0.6 }}
             className="mb-8"
           >
-            <h3 className="text-xl md:text-2xl font-serif text-gray-800 font-semibold tracking-wider">
+            <h3 className="text-xl md:text-2xl font-serif text-gray-800 font-semibold tracking-wider"   style={{ fontFamily: "'Great Vibes', cursive" }}> 
               The Groom
             </h3>
           </motion.div>
@@ -541,7 +541,7 @@ export default function App() {
                 transition={{ delay: 1.0 }}
                 className="flex items-start space-x-3"
               >
-                <span className="text-blue-600 font-semibold min-w-20">S/o</span>
+                <span className="text-blue-600 font-semibold min-w-20"  style={{ fontFamily: "'Great Vibes', cursive" }}>S/o</span>
                 <p className="text-gray-700 text-lg leading-relaxed" style={{ fontFamily: "'Dancing Script', cursive" }}>
                   Santhosh Kumar N R & Usha Kumari R
                 </p>
@@ -553,7 +553,7 @@ export default function App() {
                 transition={{ delay: 1.2 }}
                 className="flex items-start space-x-3"
               >
-                <span className="text-blue-600 font-semibold min-w-20">Address</span>
+                <span className="text-blue-600 font-semibold min-w-20"  style={{ fontFamily: "'Great Vibes', cursive" }}>Address</span>
                 <p className="text-gray-700 text-lg leading-relaxed" style={{ fontFamily: "'Dancing Script', cursive" }}>
                   Mini Bhavan, Velumthara,<br />
                   Charipparambu (PO),<br />
@@ -643,7 +643,7 @@ export default function App() {
             transition={{ delay: 0.6 }}
             className="mb-8"
           >
-            <h3 className="text-xl md:text-2xl font-serif text-rose-500 font-semibold tracking-wider">
+            <h3 className="text-xl md:text-2xl font-serif text-rose-00 font-semibold tracking-wider"  style={{ fontFamily: "'Great Vibes', cursive" }}>
               The Bride
             </h3>
           </motion.div>
@@ -661,7 +661,7 @@ export default function App() {
                 transition={{ delay: 1.0 }}
                 className="flex items-start space-x-3"
               >
-                <span className="text-rose-600 font-semibold min-w-20">D/o</span>
+                <span className="text-rose-600 font-semibold min-w-20"  style={{ fontFamily: "'Great Vibes', cursive" }}>D/o</span>
                 <p className="text-gray-700 text-lg leading-relaxed" style={{ fontFamily: "'Dancing Script', cursive" }}>
                   R Kumar & Lathika B
                 </p>
@@ -673,7 +673,7 @@ export default function App() {
                 transition={{ delay: 1.2 }}
                 className="flex items-start space-x-3"
               >
-                <span className="text-rose-600 font-semibold min-w-20">Address</span>
+                <span className="text-rose-600 font-semibold min-w-20"  style={{ fontFamily: "'Great Vibes', cursive" }}>Address</span>
                 <p className="text-gray-700 text-lg leading-relaxed" style={{ fontFamily: "'Dancing Script', cursive" }}>
                   Vaikuntam, Kuthirappalam,<br />
                   Kadakkal, Kollam
@@ -893,7 +893,7 @@ export default function App() {
             transition={{ delay: 1 }}
             className="mt-8 pt-6 border-t border-red-200"
           >
-            <p className="text-gray-500 text-sm" style={{ fontFamily: "'Dancing Script', cursive" }}>
+            <p className="text-white-600 text-sm" style={{ fontFamily: "'Dancing Script', cursive" }}>
               With love, Abhijith & Poornima
             </p>
           </motion.div>
