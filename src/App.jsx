@@ -921,7 +921,7 @@ export default function App() {
             transition={{ delay: 1 }}
             className="mt-8 pt-6 border-t border-red-200"
           >
-            <p className="text-white-600 text-sm" style={{ fontFamily: "'Dancing Script', cursive" }}>
+            <p className="text-white text-sm" style={{ fontFamily: "'Dancing Script', cursive" }}>
               With love, Abhijith & Poornima
             </p>
           </motion.div>
