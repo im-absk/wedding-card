@@ -888,7 +888,7 @@ export default function App() {
           </motion.div>
 
 
-              <motion.div
+ <motion.div
               initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
@@ -899,18 +899,17 @@ export default function App() {
                 <span>🗺️</span>
                 Wedding Photos
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-1  gap-4 text-sm">
               <motion.a
                 // href="https://maps.app.goo.gl/mDVtRoizohN25b6n9"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-2 p-3 bg-white rounded-lg border border-purple-200 hover:border-purple-400 transition-all"
+                className="flex items-center gap-2 p-3 bg-white rounded-lg border border-purple-200 hover:border-purple-400 transition-all md:flex justify-center"
               >
                 <span className="text-purple-600">📸</span>
                 <div>
                   <p className="font-medium text-gray-800">Click Here</p>
-                  {/* <p className="text-gray-600 text-xs">Athisayamangalam Temple Auditorium</p> */}
                 </div>
               </motion.a>
               </div>
