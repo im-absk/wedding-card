@@ -773,7 +773,7 @@ export default function App() {
                 className="text-2xl md:text-3xl mb-2"
                 whileHover={{ scale: 1.2, rotate: 10 }}
               >
-                📅
+                🗓️
               </motion.div>
               <p className="text-gray-700 font-semibold">Date & Time</p>
               <p className="text-purple-600 font-bold text-lg md:text-xl mt-2">January 19th, 2026</p>
