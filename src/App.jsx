@@ -901,7 +901,7 @@ export default function App() {
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-1  gap-4 text-sm">
               <motion.a
-                // href="https://maps.app.goo.gl/mDVtRoizohN25b6n9"
+                href="https://drive.google.com/drive/folders/1g_YLcWSUgqZLUkqqDvyPCTcOTA_PJOTz"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
