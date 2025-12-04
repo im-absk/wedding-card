@@ -170,7 +170,7 @@ export default function App() {
               className="relative"
             >
               <h1
-              className="text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent drop-shadow-2xl"
+              className="text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent drop-shadow-2xl pb-4"
               style={{ fontFamily: "'Dancing Script', cursive" }}
                >
                Abhijith
@@ -523,7 +523,7 @@ export default function App() {
             transition={{ delay: 0.6 }}
             className="mb-8"
           >
-            <h3 className="text-xl md:text-2xl font-serif text-gray-800 font-semibold tracking-wider"   style={{ fontFamily: "'Great Vibes', cursive" }}> 
+            <h3 className="text-xl md:text-2xl font-serif text-white font-semibold tracking-wider"   style={{ fontFamily: "'Great Vibes', cursive" }}> 
               The Groom
             </h3>
           </motion.div>
@@ -643,7 +643,7 @@ export default function App() {
             transition={{ delay: 0.6 }}
             className="mb-8"
           >
-            <h3 className="text-xl md:text-2xl font-serif text-rose-00 font-semibold tracking-wider"  style={{ fontFamily: "'Great Vibes', cursive" }}>
+            <h3 className="text-xl md:text-2xl font-serif text-white font-semibold tracking-wider"  style={{ fontFamily: "'Great Vibes', cursive" }}>
               The Bride
             </h3>
           </motion.div>
@@ -896,7 +896,7 @@ export default function App() {
 
 
                 <h4 className="text-lg font-semibold text-purple-700 mb-3 flex items-center justify-center gap-2" style={{ fontFamily: "'Great Vibes', cursive" }}>
-                <span>🗺️</span>
+                <span>💑</span>
                 Wedding Photos
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-1  gap-4 text-sm">
