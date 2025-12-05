@@ -794,7 +794,7 @@ export default function App() {
                 className="text-2xl md:text-3xl mb-2"
                 whileHover={{ scale: 1.2, rotate: 10 }}
               >
-                🏛️
+                💒
               </motion.div>
               <p className="text-gray-700 font-semibold">Wedding Venue</p>
               <p className="text-purple-600 font-bold text-lg md:text-xl mt-2">Athisayamangalam Temple Auditorium</p>
@@ -827,7 +827,7 @@ export default function App() {
                 className="text-2xl md:text-3xl mb-2"
                 whileHover={{ scale: 1.2, rotate: 10 }}
               >
-                🎵
+                🍽️
               </motion.div>
               <p className="text-gray-700 font-semibold">Reception</p>
               <p className="text-purple-600 font-bold text-lg md:text-xl mt-2">Monday 4:00 PM - 9:00 PM</p>
@@ -847,45 +847,7 @@ export default function App() {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="mt-8 bg-purple-50 rounded-xl p-6 border border-purple-200"
-          >
-              <h4 className="text-lg font-semibold text-purple-700 mb-3 flex items-center justify-center gap-2 " style={{ fontFamily: "'Great Vibes', cursive" }}>
-                <span>🗺️</span>
-                Quick Directions
-              </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <motion.a
-                href="https://maps.app.goo.gl/mDVtRoizohN25b6n9"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-2 p-3 bg-white rounded-lg border border-purple-200 hover:border-purple-400 transition-all"
-              >
-                <span className="text-purple-600">🏛️</span>
-                <div>
-                  <p className="font-medium text-gray-800">Wedding Venue</p>
-                  <p className="text-gray-600 text-xs">Athisayamangalam Temple Auditorium</p>
-                </div>
-              </motion.a>
-              <motion.a
-                href="https://maps.app.goo.gl/ecnA7jBJjSyiFDnz9"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-2 p-3 bg-white rounded-lg border border-purple-200 hover:border-purple-400 transition-all"
-              >
-                <span className="text-purple-600">🎵</span>
-                <div>
-                  <p className="font-medium text-gray-800">Reception</p>
-                  <p className="text-gray-600 text-xs">Makkattu Auditorium, Mannoor</p>
-                </div>
-              </motion.a>
-            </div>
-          </motion.div>
+        
 
 
  <motion.div
